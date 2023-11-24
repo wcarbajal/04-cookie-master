@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
+//import './globals.css'
+import { CssBaseline, ThemeProvider } from '@mui/material'
+import { darkTheme } from '@/themes'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +18,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ThemeProvider theme={darkTheme}>
+        <CssBaseline />
+        {children}
+        </ThemeProvider>
+        
+        </body>
     </html>
   )
 }
