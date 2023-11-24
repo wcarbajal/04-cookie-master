@@ -22,7 +22,7 @@ export default function RootLayout({
         <ThemeProvider theme={darkTheme}>
         <CssBaseline />
         {children}
-        </ThemeProvider>
+        </ThemeProvider
         
         </body>
     </html>
